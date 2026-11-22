@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logos/favicon.png">
+  <title>Zayan Hasan — Web-Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Fixed 3D Scroll Animation Canvas -->
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Content Layer overlayed on top of scroll animation -->
+  <div id="content">
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="brand-logo">
+          <div class="logo-badge">
+            <span class="logo-z">Z</span><span class="logo-h">H</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Zayan Hasan</span>
+            <span class="brand-sub">Web Developer</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- <a href="#contact" class="btn-download">
+            <span>Download CV</span>
+            <svg class="icon-download" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a> -->
+
+          <a
+            href="/files/ZAYAN-HASAN-TAJ-CV.pdf"
+            class="btn-download"
+            download="My-CV.pdf"
+            onclick="return confirm('Would you like to download my CV?')"
+          >
+            <span>Download CV</span>
+            <svg
+              class="icon-download"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Direct Contact -->
+     <a
+      id="mail-button"
+      class="mail-button"
+      href="https://mail.google.com/mail/?view=cm&to=zayanhasantaj619@gmail.com"
+      aria-label="Email me"
+      title="Email me"
+      target="_blank"
+      rel="noopener noreferrer">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="m3 7 9 6 9-6"></path>
+      </svg>
+    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">HELLO, I'M</div>
+          <h1 class="hero-title">
+            <span class="title-name">Zayan Hasan</span>
+            <span class="title-role">Web Developer</span>
+          </h1>
+          <p class="hero-desc">
+            I’m a passionate web developer from Bangladesh, focused on creating beautiful, user-friendly digital experiences. I work with modern technologies like React, Next.js, Tailwind CSS, and the MERN stack to build responsive websites that make a real impact.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Hire Me</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://discord.com/users/659322994321129483" target="_blank" class="social-icon" title="Discord" aria-label="Discord">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M19.73 5.15A18.2 18.2 0 0 0 15.2 3.75a.07.07 0 0 0-.08.04c-.2.36-.42.83-.58 1.2a16.8 16.8 0 0 0-5.08 0c-.16-.38-.39-.84-.59-1.2a.08.08 0 0 0-.08-.04 18.2 18.2 0 0 0-4.53 1.4.07.07 0 0 0-.03.03C1.35 9.45.56 13.64.96 17.78c0 .02.02.05.04.06a18.3 18.3 0 0 0 5.55 2.8.08.08 0 0 0 .09-.03c.43-.59.81-1.2 1.14-1.86a.08.08 0 0 0-.04-.11 12 12 0 0 1-1.74-.83.08.08 0 0 1-.01-.13l.35-.27a.08.08 0 0 1 .08-.01c3.64 1.66 7.58 1.66 11.18 0a.08.08 0 0 1 .08.01l.35.27a.08.08 0 0 1-.01.13c-.55.32-1.13.6-1.74.83a.08.08 0 0 0-.04.11c.34.65.72 1.27 1.14 1.86a.08.08 0 0 0 .09.03 18.2 18.2 0 0 0 5.56-2.8.08.08 0 0 0 .04-.06c.47-4.78-.8-8.94-3.36-12.6a.06.06 0 0 0-.03-.03ZM8.85 14.8c-1.1 0-2-.99-2-2.2 0-1.22.88-2.2 2-2.2 1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Zm6.3 0c-1.1 0-2-.99-2-2.2 0-1.22.87-2.2 2-2.2 1.12 0 2.01.99 2 2.2 0 1.21-.88 2.2-2 2.2Z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/ZayanHasanTaj" target="_blank" class="social-icon" title="Github" aria-label="Github">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+              />
+            </svg>
+            </a>
+            <a href="https://bd.linkedin.com/in/zayan-hasan-taj-53074728a" target="_blank" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+              <span class="in-text">in</span>
+            </a>
+            <a href="https://www.facebook.com/share/1DrUwYazMZ/" target="_blank" class="social-icon" title="Facebook" aria-label="Facebook">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual-accent">
+          <!-- Artistic slogan from reference, overlayed gracefully -->
+          <div class="script-badge">
+            <span class="script-text">Building<br>Modern<br>Web Experiences</span>
+          </div>
+
+          <div class="scroll-down-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow">
+              <svg width="16" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="skills-wrapper">
+          <div class="skills-intro">
+            <div class="section-tag">MY SKILLS</div>
+            <h2 class="section-title">Design Skills That Bring Ideas to Life</h2>
+            <p class="section-desc">
+              I use modern tools and creative thinking to design user-friendly and visually stunning digital products.
+            </p>
+            <a href="#about" class="btn btn-outline-pill">
+              <span>Explore Services</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="skills-cards-grid">
+            <!-- Skill 1: HTML -->
+            <div class="skill-card">
+              <div class="skill-icon-box code-box">
+                <span class="code-bracket">&lt;/&gt;</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">HTML</h3>
+                <span class="skill-sub">Web Structure</span>
+              </div>
+            </div>
+
+            <!-- Skill 2: Css  -->
+            <div class="skill-card">
+              <div class="skill-icon-box css-box">
+                <img class="logos" src="/images/logos/icons8-css-logo-48.png" alt="CSS">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">CSS</h3>
+                <span class="skill-sub">Web Styling</span>
+              </div>
+            </div>
+
+            <!-- Skill 3: javaScript  -->
+            <div class="skill-card">
+              <div class="skill-icon-box js-box">
+                <img class="logos" src="/images/logos/icons8-javascript-logo-100.png" alt="JS">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">JavaScript</h3>
+                <span class="skill-sub">Web Interactivity</span>
+              </div>
+            </div>
+
+            <!-- Skill 4: Tailwind CSS  -->
+            <div class="skill-card">
+              <div class="skill-icon-box tailwind-box">
+                <img class="logos" src="/images/logos/icons8-tailwind-css-48.png" alt="Tailwind">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Tailwind CSS</h3>
+                <span class="skill-sub">Rapid Styling</span>
+              </div>
+            </div>
+
+            <!-- Skill 5: React js  -->
+            <div class="skill-card">
+              <div class="skill-icon-box react-box">
+                <img class="logos" src="/images/logos/icons8-react-100.png" alt="React">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">React JS</h3>
+                <span class="skill-sub">Dynamic Web</span>
+              </div>
+            </div>
+
+            <!-- Skill 6: Express js  -->
+            <div class="skill-card">
+              <div class="skill-icon-box express-box">
+                <img class="logos" src="/images/logos/icons8-express-js-48.png" alt="Express js">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Expres JS</h3>
+                <span class="skill-sub">Backend Dev</span>
+              </div>
+            </div>
+
+            <!-- Skill 7: Node js  -->
+            <div class="skill-card">
+              <div class="skill-icon-box node-box">
+                <img class="logos" src="/images/logos/icons8-node-js-48.png" alt="Node js">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Node JS</h3>
+                <span class="skill-sub">Runtime</span>
+              </div>
+            </div>
+
+            <!-- Skill 8: MongoDB  -->
+            <div class="skill-card">
+              <div class="skill-icon-box mongodb-box">
+                <img class="logos" src="/images/logos/icons8-mongodb-48.png" alt="MongoDB">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">MongoDB</h3>
+                <span class="skill-sub">Database</span>
+              </div>
+            </div>
+
+            <!-- Skill 9: Git  -->
+            <div class="skill-card">
+              <div class="skill-icon-box git-box">
+                <img class="logos" src="/images/logos/icons8-git-48.png" alt="Git">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Git</h3>
+                <span class="skill-sub">Version Control</span>
+              </div>
+            </div>
+
+            <!-- Skill 10: Github  -->
+            <div class="skill-card">
+              <div class="skill-icon-box github-box">
+                <img class="logos" src="/images/logos/icons8-github-50.png" alt="Github">
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Github</h3>
+                <span class="skill-sub">Code Host</span>
+              </div>
+            </div>
+
+            <!-- Skill 11: Photoshop -->
+            <div class="skill-card">
+              <div class="skill-icon-box ps-box">
+                <span class="ps-logo">Ps</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Adobe Photoshop</h3>
+                <span class="skill-sub">Visual Design</span>
+              </div>
+            </div>
+
+            <!-- Skill 12: Illustrator -->
+            <div class="skill-card">
+              <div class="skill-icon-box ai-box">
+                <span class="ai-logo">Ai</span>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Adobe Illustrator</h3>
+                <span class="skill-sub">Graphics</span>
+              </div>
+            </div>
+
+            
+
+            <!-- Skill 13: Figma -->
+            <div class="skill-card">
+              <div class="skill-icon-box figma-box">
+                <svg width="32" height="32" viewBox="0 0 38 57" fill="none">
+                  <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                  <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                  <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                  <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                  <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Figma</h3>
+                <span class="skill-sub">UI/UX Design</span>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-card-left">
+          <div class="about-badge-card">
+            <div class="badge-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="badge-number">3+</div>
+            <div class="badge-label">Years of Experience</div>
+          </div>
+
+          <div class="creative-thinker-callout">
+            <span class="creative-thinker-text">Creative<br>Thinker</span>
+            <svg class="hand-arrow" width="40" height="40" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M10 15 Q 35 15 35 35"></path>
+              <polyline points="28 30 35 37 42 30"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <div class="about-info">
+          <div class="section-tag">ABOUT ME</div>
+          <h2 class="about-title">
+            <span>I'm Zayan Hasan</span>
+            <span class="about-title-role">Web Developer</span>
+          </h2>
+          <p class="about-text">
+            I'm a passionate Web Developer with 3+ years of experience in creating modern and user-friendly digital experiences. I love turning complex problems into simple, elegant designs. My goal is to craft meaningful experiences that connect users with brands and help businesses grow.
+          </p>
+
+          <div class="stats-counter-grid">
+            <div class="stat-item">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">30+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+          </div>
+
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Work Together</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Portfolio Section -->
+    <section id="projects" class="section portfolio-section">
+      <div class="container">
+        <div class="portfolio-header">
+          <div class="portfolio-title-group">
+            <div class="section-tag">MY PROJECTS</div>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-desc">
+              A collection of my recent web development projects, showcasing my skills in frontend development, responsive design, and creative problem-solving.
+            </p>
+          </div>
+          <a href="projects.html" class="link-view-all">
+            <span>View All Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Mobile App Design -->
+          <a class="projects-link" href="#">
+            <div class="project-card">
+            <div class="project-mockup mobile-app-mockup">
+              <div class="mockup-screen-container">
+                <div class="mini-phone">
+                  <div class="phone-notch"></div>
+                  <div class="phone-content fitness-app">
+                    <div class="app-header-bar">
+                      <span class="app-dot"></span>
+                      <span class="app-title-text">Daily Activity</span>
+                    </div>
+                    <div class="app-circle-graph">
+                      <div class="ring-active"></div>
+                      <span class="graph-val">84%</span>
+                    </div>
+                    <div class="app-mini-cards">
+                      <div class="mini-metric">🔥 520 kcal</div>
+                      <div class="mini-metric">⚡ 8,420 steps</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-text">
+                <h3 class="project-name">Mobile App Design</h3>
+                <span class="project-category">Fitness &amp; Health App</span>
+              </div>
+              <button class="project-arrow-btn" aria-label="View project details">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          </a>
+
+          <!-- Project 2: Website Design -->
+          <a class="projects-link" href="#">
+            <div class="project-card">
+            <div class="project-mockup website-mockup">
+              <div class="mockup-screen-container">
+                <div class="mini-browser">
+                  <div class="browser-bar">
+                    <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                  </div>
+                  <div class="browser-body travel-landing">
+                    <div class="travel-hero">
+                      <div class="travel-title">Explore Patagonia</div>
+                      <div class="travel-btn">Book Trip</div>
+                    </div>
+                    <div class="travel-search-strip">
+                      <div class="strip-pill">Destination</div>
+                      <div class="strip-pill">Guests</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-text">
+                <h3 class="project-name">Website Design</h3>
+                <span class="project-category">Travel Landing Page</span>
+              </div>
+              <button class="project-arrow-btn" aria-label="View project details">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          </a>
+
+          <!-- Project 3: Dashboard UI -->
+          <a class="projects-link" href="#">
+            <div class="project-card">
+            <div class="project-mockup dashboard-mockup">
+              <div class="mockup-screen-container">
+                <div class="mini-browser">
+                  <div class="browser-bar">
+                    <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                  </div>
+                  <div class="browser-body analytics-dash">
+                    <div class="dash-sidebar">
+                      <div class="dash-bar-line"></div>
+                      <div class="dash-bar-line"></div>
+                    </div>
+                    <div class="dash-content">
+                      <div class="dash-stats-row">
+                        <div class="stat-pill">📈 +28.4%</div>
+                        <div class="stat-pill">💰 $94.2k</div>
+                      </div>
+                      <div class="dash-bars-chart">
+                        <div class="bar" style="height: 45%;"></div>
+                        <div class="bar" style="height: 75%;"></div>
+                        <div class="bar" style="height: 60%;"></div>
+                        <div class="bar" style="height: 95%;"></div>
+                        <div class="bar" style="height: 80%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-text">
+                <h3 class="project-name">Dashboard UI</h3>
+                <span class="project-category">Analytics Dashboard</span>
+              </div>
+              <button class="project-arrow-btn" aria-label="View project details">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          </a>
+
+          <!-- Project 4: Branding Design -->
+          <a class="projects-link" href="#">
+            <div class="project-card">
+            <div class="project-mockup branding-mockup">
+              <div class="mockup-screen-container branding-display">
+                <div class="brand-card red-card">
+                  <div class="brand-emblem">MZ</div>
+                </div>
+                <div class="brand-card white-card">
+                  <div class="mini-business-lines">
+                    <div class="b-line w-long"></div>
+                    <div class="b-line w-short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-text">
+                <h3 class="project-name">Branding Design</h3>
+                <span class="project-category">Tech Brand Identity</span>
+              </div>
+              <button class="project-arrow-btn" aria-label="View project details">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Talk CTA Banner Section -->
+    <section id="contact" class="section cta-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-content">
+            <div class="cta-tag">LET'S TALK</div>
+            <h2 class="cta-title">Got a Project in Mind?</h2>
+            <p class="cta-desc">
+              I'm always open to new opportunities, collaborations and exciting projects. Let's create something amazing together!
+            </p>
+          </div>
+          <div class="cta-action">
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=zayanhasantaj619@gmail.com"
+              class="btn btn-primary cta-btn"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span>Contact Me</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-top">
+          <a href="#home" class="brand-logo">
+            <div class="logo-badge">
+              <span class="logo-z">Z</span><span class="logo-h">H</span>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Zayan Hasan</span>
+              <span class="brand-sub">Web Developer</span>
+            </div>
+          </a>
+
+          <nav class="footer-nav">
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="#skills" class="footer-link">Skills</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </nav>
+
+          <div class="footer-socials">
+            <a href="https://discord.com/users/659322994321129483" target="_blank" class="social-icon" title="Discord" aria-label="Discord">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M19.73 5.15A18.2 18.2 0 0 0 15.2 3.75a.07.07 0 0 0-.08.04c-.2.36-.42.83-.58 1.2a16.8 16.8 0 0 0-5.08 0c-.16-.38-.39-.84-.59-1.2a.08.08 0 0 0-.08-.04 18.2 18.2 0 0 0-4.53 1.4.07.07 0 0 0-.03.03C1.35 9.45.56 13.64.96 17.78c0 .02.02.05.04.06a18.3 18.3 0 0 0 5.55 2.8.08.08 0 0 0 .09-.03c.43-.59.81-1.2 1.14-1.86a.08.08 0 0 0-.04-.11 12 12 0 0 1-1.74-.83.08.08 0 0 1-.01-.13l.35-.27a.08.08 0 0 1 .08-.01c3.64 1.66 7.58 1.66 11.18 0a.08.08 0 0 1 .08.01l.35.27a.08.08 0 0 1-.01.13c-.55.32-1.13.6-1.74.83a.08.08 0 0 0-.04.11c.34.65.72 1.27 1.14 1.86a.08.08 0 0 0 .09.03 18.2 18.2 0 0 0 5.56-2.8.08.08 0 0 0 .04-.06c.47-4.78-.8-8.94-3.36-12.6a.06.06 0 0 0-.03-.03ZM8.85 14.8c-1.1 0-2-.99-2-2.2 0-1.22.88-2.2 2-2.2 1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Zm6.3 0c-1.1 0-2-.99-2-2.2 0-1.22.87-2.2 2-2.2 1.12 0 2.01.99 2 2.2 0 1.21-.88 2.2-2 2.2Z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/ZayanHasanTaj" target="_blank" class="social-icon" title="Github" aria-label="Github">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"
+              />
+            </svg>
+            </a>
+            <a href="https://bd.linkedin.com/in/zayan-hasan-taj-53074728a" target="_blank" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+              <span class="in-text">in</span>
+            </a>
+            <a href="https://www.facebook.com/share/1DrUwYazMZ/" target="_blank" class="social-icon" title="Facebook" aria-label="Facebook">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2025 Zayan Hasan. All rights reserved.</p>
+          <p class="credit">Built with <span class="heart">&hearts;</span> and a passion for the web.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/logos/favicon.png">
+  <title>All Projects — Zayan Hasan | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body class="projects-page">
+
+  <!-- Direct Contact Floating Button -->
+  <a
+    id="mail-button"
+    class="mail-button"
+    href="https://mail.google.com/mail/?view=cm&to=zayanhasantaj619@gmail.com"
+    aria-label="Email me"
+    title="Email me"
+    target="_blank"
+    rel="noopener noreferrer">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true">
+      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+      <path d="m3 7 9 6 9-6"></path>
+    </svg>
+  </a>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html#home" class="brand-logo">
+        <div class="logo-badge">
+          <span class="logo-z">Z</span><span class="logo-h">H</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Zayan Hasan</span>
+          <span class="brand-sub">Web Developer</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#projects" class="nav-link active">Projects</a> <!-- projects.html -->
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a
+          href="/files/ZAYAN-HASAN-TAJ-CV.pdf"
+          class="btn-download"
+          download="My-CV.pdf"
+          onclick="return confirm('Would you like to download my CV?')"
+        >
+          <span>Download CV</span>
+          <svg
+            class="icon-download"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="projects-main">
+
+    <!-- ====================================================================
+         SECTION 1: HERO / TOP SECTION (Title, Subtext & Category Filters)
+         ==================================================================== -->
+    <section class="projects-hero-section">
+      <div class="container">
+        <!-- Breadcrumb link back to home -->
+        <div class="hero-breadcrumb">
+          <a href="index.html" class="breadcrumb-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Home</span>
+          </a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">All Projects</span>
+        </div>
+
+        <div class="projects-hero-content">
+          <div class="section-tag">PORTFOLIO &amp; CASE STUDIES</div>
+          <h1 class="projects-hero-title">
+            <span>Crafted with Code,</span>
+            <span class="title-highlight">Designed for Performance</span>
+          </h1>
+          <p class="projects-hero-desc">
+            A comprehensive collection of my recent web development work, full-stack applications, interactive UI components, and modern design systems built using React, Next.js, Node.js, MongoDB, and Tailwind CSS.
+          </p>
+
+          <!-- Quick Metrics Banner -->
+          <div class="projects-metrics-row">
+            <div class="metric-pill">
+              <span class="metric-num">15+</span>
+              <span class="metric-lbl">Completed Projects</span>
+            </div>
+            <div class="metric-pill">
+              <span class="metric-num">100%</span>
+              <span class="metric-lbl">Responsive &amp; Mobile-Ready</span>
+            </div>
+            <div class="metric-pill">
+              <span class="metric-num">MERN</span>
+              <span class="metric-lbl">&amp; Next.js Ecosystem</span>
+            </div>
+          </div>
+
+          <!-- Interactive Category Filter Tabs -->
+          <div class="filter-controls-wrap">
+            <div class="filter-tabs-container" role="tablist">
+              <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+                <span>All Projects</span>
+                <span class="filter-count" id="count-all">8</span>
+              </button>
+              <button class="filter-tab" data-filter="fullstack" role="tab" aria-selected="false">
+                <span>Full Stack &amp; MERN</span>
+                <span class="filter-count" id="count-fullstack">3</span>
+              </button>
+              <button class="filter-tab" data-filter="frontend" role="tab" aria-selected="false">
+                <span>React &amp; Next.js</span>
+                <span class="filter-count" id="count-frontend">3</span>
+              </button>
+              <button class="filter-tab" data-filter="dashboard" role="tab" aria-selected="false">
+                <span>Dashboards &amp; Web3</span>
+                <span class="filter-count" id="count-dashboard">2</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: ALL PROJECTS SHOWCASE GRID (Filterable Gallery)
+         ==================================================================== -->
+    <section class="section projects-gallery-section" id="projects-gallery">
+      <div class="container">
+        <div class="gallery-status-bar">
+          <span class="showing-text" id="showing-text">Showing 8 of 8 projects</span>
+          <span class="sort-tag">⚡ Sorted by Recent Works</span>
+        </div>
+
+        <div class="projects-showcase-grid" id="projects-grid">
+
+          <!-- Project 1: PulseFit Pro -->
+          <article class="showcase-card" data-category="fullstack">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-fitness">
+                <div class="mockup-device-phone">
+                  <div class="phone-speaker"></div>
+                  <div class="phone-screen">
+                    <div class="screen-top">
+                      <span class="pulse-dot"></span>
+                      <span class="screen-name">PulseFit Pro</span>
+                    </div>
+                    <div class="ring-tracker">
+                      <div class="ring-circle"></div>
+                      <span class="ring-text">84%</span>
+                    </div>
+                    <div class="screen-tags">
+                      <span>🔥 520 kcal</span>
+                      <span>⚡ 8,420 steps</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-fullstack">MERN Full-Stack</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2025</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Health &amp; Fitness Tech</span>
+              </div>
+              <h2 class="card-title">PulseFit Pro — Fitness Tracker &amp; Analytics</h2>
+              <p class="card-desc">
+                A full-stack fitness intelligence application featuring automated calorie calculation, workout logging, real-time activity rings, and persistent user profile tracking.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Express</span>
+                <span class="tech-chip">MongoDB</span>
+                <span class="tech-chip">Tailwind</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: WanderLust Global -->
+          <article class="showcase-card" data-category="frontend">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-travel">
+                <div class="mockup-device-browser">
+                  <div class="mockup-browser-nav">
+                    <span class="b-circle"></span><span class="b-circle"></span><span class="b-circle"></span>
+                  </div>
+                  <div class="mockup-browser-view travel-view">
+                    <div class="travel-top-banner">
+                      <span class="travel-heading">Explore Patagonia</span>
+                      <span class="travel-cta-mini">Book Trip</span>
+                    </div>
+                    <div class="travel-booking-bar">
+                      <span class="b-pill">Dates</span>
+                      <span class="b-pill">2 Guests</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-frontend">Next.js 14</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2025</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Travel &amp; Hospitality</span>
+              </div>
+              <h2 class="card-title">WanderLust — Travel Discovery &amp; Booking</h2>
+              <p class="card-desc">
+                High-performance tourism portal featuring date-range search, interactive destination catalogs, customer review filtering, and seamless Stripe checkout integration.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">Next.js 14</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">Tailwind CSS</span>
+                <span class="tech-chip">Stripe</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: ApexMetrics Dashboard -->
+          <article class="showcase-card" data-category="dashboard">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-dashboard">
+                <div class="mockup-device-browser">
+                  <div class="mockup-browser-nav">
+                    <span class="b-circle"></span><span class="b-circle"></span><span class="b-circle"></span>
+                  </div>
+                  <div class="mockup-browser-view dash-view">
+                    <div class="dash-grid-stats">
+                      <div class="d-stat">📈 +28.4%</div>
+                      <div class="d-stat">💰 $94.2k</div>
+                    </div>
+                    <div class="dash-bars-visual">
+                      <div class="d-bar" style="height: 40%;"></div>
+                      <div class="d-bar" style="height: 70%;"></div>
+                      <div class="d-bar" style="height: 55%;"></div>
+                      <div class="d-bar" style="height: 90%;"></div>
+                      <div class="d-bar" style="height: 75%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-dashboard">SaaS Dashboard</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2024</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Cloud Analytics &amp; FinTech</span>
+              </div>
+              <h2 class="card-title">ApexMetrics — Cloud Financial &amp; Telemetry Hub</h2>
+              <p class="card-desc">
+                An enterprise analytics dashboard with real-time MRR telemetry, conversion funnel telemetry, data export capabilities, and dark glassmorphic component structure.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">React 18</span>
+                <span class="tech-chip">Chart.js</span>
+                <span class="tech-chip">Tailwind CSS</span>
+                <span class="tech-chip">Supabase</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: NovaCommerce -->
+          <article class="showcase-card" data-category="fullstack">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-ecommerce">
+                <div class="mockup-device-browser">
+                  <div class="mockup-browser-nav">
+                    <span class="b-circle"></span><span class="b-circle"></span><span class="b-circle"></span>
+                  </div>
+                  <div class="mockup-browser-view ecom-view">
+                    <div class="ecom-product-card">
+                      <div class="product-icon-box">👟</div>
+                      <div class="product-info-mini">
+                        <span class="p-title">Air Max 2025</span>
+                        <span class="p-price">$180.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-fullstack">E-Commerce</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2024</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Headless E-Commerce</span>
+              </div>
+              <h2 class="card-title">NovaCommerce — Headless E-Commerce Experience</h2>
+              <p class="card-desc">
+                Ultra-fast storefront with instant search indexing, sliding cart drawer, inventory validation, customer order history, and Stripe payment gateway.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">Redux Toolkit</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Stripe</span>
+                <span class="tech-chip">Tailwind</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: DevSphere Community -->
+          <article class="showcase-card" data-category="frontend">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-community">
+                <div class="mockup-device-browser">
+                  <div class="mockup-browser-nav">
+                    <span class="b-circle"></span><span class="b-circle"></span><span class="b-circle"></span>
+                  </div>
+                  <div class="mockup-browser-view dev-view">
+                    <div class="code-snippet-box">
+                      <span class="code-line">const app = express();</span>
+                      <span class="code-line highlight">app.use(cors());</span>
+                      <span class="code-line">app.listen(5000);</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-frontend">Developer Hub</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2024</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Developer Networking</span>
+              </div>
+              <h2 class="card-title">DevSphere — Tech Publisher &amp; Developer Hub</h2>
+              <p class="card-desc">
+                Social publishing and code discussion platform featuring markdown authoring, syntax-highlighted code blocks, real-time upvotes, and developer profile directories.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Firebase</span>
+                <span class="tech-chip">Tailwind CSS</span>
+                <span class="tech-chip">Prism.js</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: CryptoPulse -->
+          <article class="showcase-card" data-category="dashboard">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-crypto">
+                <div class="mockup-device-browser">
+                  <div class="mockup-browser-nav">
+                    <span class="b-circle"></span><span class="b-circle"></span><span class="b-circle"></span>
+                  </div>
+                  <div class="mockup-browser-view crypto-view">
+                    <div class="crypto-ticker">
+                      <span class="c-coin">BTC / USD</span>
+                      <span class="c-price">$94,150.00</span>
+                      <span class="c-badge">+4.8%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-dashboard">WebSockets API</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2024</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">FinTech &amp; Web3</span>
+              </div>
+              <h2 class="card-title">CryptoPulse — Real-Time Market Telemetry</h2>
+              <p class="card-desc">
+                Streaming market intelligence app consuming CoinGecko WebSockets, featuring interactive candlestick charts, price alert triggers, and multi-currency portfolio tracking.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">WebSockets</span>
+                <span class="tech-chip">CoinGecko API</span>
+                <span class="tech-chip">Chart.js</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: TaskFlow Agile Board -->
+          <article class="showcase-card" data-category="fullstack">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-kanban">
+                <div class="mockup-device-browser">
+                  <div class="mockup-browser-nav">
+                    <span class="b-circle"></span><span class="b-circle"></span><span class="b-circle"></span>
+                  </div>
+                  <div class="mockup-browser-view kanban-view">
+                    <div class="kanban-cols">
+                      <div class="k-col"><div class="k-card"></div><div class="k-card"></div></div>
+                      <div class="k-col active-col"><div class="k-card done-card"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-fullstack">Productivity</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2023</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Agile Project Management</span>
+              </div>
+              <h2 class="card-title">TaskFlow — Real-Time Kanban Workspace</h2>
+              <p class="card-desc">
+                Drag-and-drop workflow management tool featuring sprint planning milestones, team member assignments, real-time board sync, and priority tagging.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">DnD Kit</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">PostgreSQL</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: BrandSphere Design System -->
+          <article class="showcase-card" data-category="frontend">
+            <div class="card-mockup-wrap">
+              <div class="mockup-canvas mockup-branding">
+                <div class="branding-items-row">
+                  <div class="b-badge-red">ZH</div>
+                  <div class="b-paper-white">
+                    <div class="p-line w-long"></div>
+                    <div class="p-line w-short"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="card-badge badge-frontend">UI Design System</span>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="project-year">2023</span>
+                <span class="meta-dot">•</span>
+                <span class="project-cat-name">Design Systems &amp; UI Kit</span>
+              </div>
+              <h2 class="card-title">BrandSphere — Tech Brand Identity &amp; UI Kit</h2>
+              <p class="card-desc">
+                A reusable frontend component design system with accessible typography tokens, harmonious color palettes, fluid grids, and Storybook documentation.
+              </p>
+              <div class="tech-stack-pills">
+                <span class="tech-chip">Figma</span>
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">Tailwind CSS</span>
+                <span class="tech-chip">Storybook</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">
+                  <span>Live Demo</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="https://github.com/ZayanHasanTaj" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-ghost" title="Source Code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: ENGINEERING WORKFLOW & PROCESS ("How I Build")
+         ==================================================================== -->
+    <section class="section process-section">
+      <div class="container">
+        <div class="process-header">
+          <div class="section-tag">METHODOLOGY &amp; WORKFLOW</div>
+          <h2 class="section-title">How I Turn Ideas into Production-Grade Software</h2>
+          <p class="section-desc">
+            A disciplined, four-phase engineering approach ensuring high performance, clean code architecture, and timely delivery for every web build.
+          </p>
+        </div>
+
+        <div class="process-cards-grid">
+          <div class="process-step-card">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <div class="step-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Discovery &amp; System Architecture</h3>
+            <p class="step-desc">
+              Scoping project requirements, evaluating technology trade-offs, designing relational/NoSQL schemas, and mapping responsive user journeys.
+            </p>
+            <div class="step-tag-pill">Requirements &amp; Tech Stack</div>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <div class="step-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">UI/UX &amp; Component Systems</h3>
+            <p class="step-desc">
+              Building modular component hierarchies in Tailwind CSS, ensuring strict WCAG accessibility, and styling fluid micro-interactions.
+            </p>
+            <div class="step-tag-pill">Design Tokens &amp; UX</div>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <div class="step-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Full-Stack Development</h3>
+            <p class="step-desc">
+              Writing maintainable, type-safe React/Next.js frontend applications connected to secure RESTful API backends and robust databases.
+            </p>
+            <div class="step-tag-pill">Clean Code &amp; API Integration</div>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-top">
+              <span class="step-num">04</span>
+              <div class="step-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="step-title">Testing, SEO &amp; CI/CD Deployment</h3>
+            <p class="step-desc">
+              Auditing 90+ Lighthouse performance scores, cross-browser compatibility verification, SEO optimization, and deployment on Vercel or cloud hosts.
+            </p>
+            <div class="step-tag-pill">Lighthouse 99+ &amp; Cloud Launch</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: CLIENT REVIEWS & COLLABORATION CALL-TO-ACTION
+         ==================================================================== -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="testimonials-header">
+          <div class="section-tag">TESTIMONIALS &amp; REVIEWS</div>
+          <h2 class="section-title">What Collaborators &amp; Founders Say</h2>
+          <p class="section-desc">
+            Direct feedback from teams and founders I've collaborated with to build impactful digital solutions.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Zayan engineered our cloud SaaS dashboard from scratch with phenomenal attention to detail. The UI is silky smooth, fast, and our clients constantly praise the clarity of the interface."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">AM</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Alex Morgan</h4>
+                <span class="reviewer-role">Founder @ CloudMetrics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "His command over modern React, Next.js, and Tailwind CSS made our e-commerce relaunch a huge success. Prompt communication, spotless code quality, and zero launch bugs."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">SC</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">Sarah Chen</h4>
+                <span class="reviewer-role">Head of Product @ NovaStyle</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "An exceptional developer who pairs serious engineering skills with an aesthetic eye for UI design. Delivered our project ahead of deadline with top-tier Lighthouse scores."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">DM</div>
+              <div class="reviewer-info">
+                <h4 class="reviewer-name">David Miller</h4>
+                <span class="reviewer-role">Technical Lead @ Horizon Labs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrated Call-to-Action Banner -->
+        <div class="projects-cta-wrap">
+          <div class="cta-banner">
+            <div class="cta-content">
+              <div class="cta-tag">LET'S BUILD SOMETHING GREAT</div>
+              <h2 class="cta-title">Have a Project or Collaboration in Mind?</h2>
+              <p class="cta-desc">
+                I'm available for freelance web development, full-stack builds, and frontend consulting. Let's discuss your goals and bring your project to life.
+              </p>
+            </div>
+            <div class="cta-action-group">
+              <a
+                href="https://mail.google.com/mail/?view=cm&to=zayanhasantaj619@gmail.com"
+                class="btn btn-primary cta-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>Start a Conversation</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="index.html" class="btn btn-outline cta-btn-secondary">
+                <span>Back to Home</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <a href="index.html#home" class="brand-logo">
+          <div class="logo-badge">
+            <span class="logo-z">Z</span><span class="logo-h">H</span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Zayan Hasan</span>
+            <span class="brand-sub">Web Developer</span>
+          </div>
+        </a>
+
+        <nav class="footer-nav">
+          <a href="index.html#home" class="footer-link">Home</a>
+          <a href="index.html#about" class="footer-link">About</a>
+          <a href="projects.html" class="footer-link active">Projects</a>
+          <a href="index.html#skills" class="footer-link">Skills</a>
+          <a href="index.html#contact" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="https://discord.com/users/659322994321129483" target="_blank" class="social-icon" title="Discord" aria-label="Discord">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.73 5.15A18.2 18.2 0 0 0 15.2 3.75a.07.07 0 0 0-.08.04c-.2.36-.42.83-.58 1.2a16.8 16.8 0 0 0-5.08 0c-.16-.38-.39-.84-.59-1.2a.08.08 0 0 0-.08-.04 18.2 18.2 0 0 0-4.53 1.4.07.07 0 0 0-.03.03C1.35 9.45.56 13.64.96 17.78c0 .02.02.05.04.06a18.3 18.3 0 0 0 5.55 2.8.08.08 0 0 0 .09-.03c.43-.59.81-1.2 1.14-1.86a.08.08 0 0 0-.04-.11 12 12 0 0 1-1.74-.83.08.08 0 0 1-.01-.13l.35-.27a.08.08 0 0 1 .08-.01c3.64 1.66 7.58 1.66 11.18 0a.08.08 0 0 1 .08.01l.35.27a.08.08 0 0 1-.01.13c-.55.32-1.13.6-1.74.83a.08.08 0 0 0-.04.11c.34.65.72 1.27 1.14 1.86a.08.08 0 0 0 .09.03 18.2 18.2 0 0 0 5.56-2.8.08.08 0 0 0 .04-.06c.47-4.78-.8-8.94-3.36-12.6a.06.06 0 0 0-.03-.03ZM8.85 14.8c-1.1 0-2-.99-2-2.2 0-1.22.88-2.2 2-2.2 1.13 0 2.02.99 2 2.2 0 1.21-.88 2.2-2 2.2Zm6.3 0c-1.1 0-2-.99-2-2.2 0-1.22.87-2.2 2-2.2 1.12 0 2.01.99 2 2.2 0 1.21-.88 2.2-2 2.2Z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/ZayanHasanTaj" target="_blank" class="social-icon" title="Github" aria-label="Github">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.58 2.35 1.12 2.92.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.2 10.2 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+            </svg>
+          </a>
+          <a href="https://bd.linkedin.com/in/zayan-hasan-taj-53074728a" target="_blank" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+            <span class="in-text">in</span>
+          </a>
+          <a href="https://www.facebook.com/share/1DrUwYazMZ/" target="_blank" class="social-icon" title="Facebook" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.7v8h3.1Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Zayan Hasan. All rights reserved.</p>
+        <p class="credit">Built with <span class="heart">&hearts;</span> and a passion for the web.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="projects.js"></script>
+</body>
+</html>
