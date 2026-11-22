@@ -6,7 +6,7 @@ A responsive personal portfolio website for **Zayan Hasan**, a web developer fro
 
 Add your deployed Vercel URL here after deployment:
 
-`https://your-project-name.vercel.app`
+`https://zayansportfolio.vercel.app/`
 
 ## Features
 
